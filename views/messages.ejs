@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vypis zprav</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <h1>Message web</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>IP</th>
+                <th>Time</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% zpravy.forEach(function(zprava) { %>
+                <tr>
+                    <td><%= zprava.author %></td>
+                    <td><%= zprava.ipAddress %></td>
+                    <td><%= new Date(zprava.date).toLocaleString() %></td> // Modified line
+                    <td><%= zprava.message %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Number of Messages: <%= zpravy.length %></td>
+            </tr>
+        </tfoot>
+    </table>
+    <footer>
+        <p>&copy; 2024 Ondřej Honus</p>
+    </footer>
+    
+</body>
+</html>

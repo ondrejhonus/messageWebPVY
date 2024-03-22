@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Zpravodajský web</h1>
+    </header>
+    <main>
+      <form action="/submit" method="post">
+      <div class="zprava">
+        <h2>Nová zpráva</h2>
+        <label for="author">Autor:</label>
+        <br>
+        <input type="text" name="author" id="author" required>
+        <br>
+        <label for="message">Zpráva:</label>
+        <br>
+        <textarea name="message" id="message" required></textarea>
+        <button type="submit">Odeslat</button>
+      </div>
+    </form>
+    </main>
+    <footer>
+      <hr/>
+      <p>&copy; 2024 - Ondřej Honus</p>
+    </footer>
+  </body>
+</html>
